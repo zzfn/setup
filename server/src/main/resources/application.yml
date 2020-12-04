@@ -1,0 +1,19 @@
+server:
+  port: 8761
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: test1
+#          uri: http://www.baidu.com
+#          predicates:
+#            - Path=/baidu/**
+#          filters:
+#            - StripPrefix=1
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
