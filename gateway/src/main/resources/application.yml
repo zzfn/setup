@@ -1,0 +1,21 @@
+server:
+  port: 8764
+
+spring:
+  application:
+    name: eureka-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
