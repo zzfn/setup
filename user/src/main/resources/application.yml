@@ -3,10 +3,10 @@ server:
 
 eureka:
   client:
-    service-url:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka
+    serviceUrl:
+      defaultZone: http://${eureka.instance.ip-address}:8761/eureka
   instance:
-    hostname: localhost
+    ip-address: 127.0.0.1
     prefer-ip-address: true
 
 #当前服务名称
