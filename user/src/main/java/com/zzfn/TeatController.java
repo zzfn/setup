@@ -17,4 +17,8 @@ public class TeatController {
     public String helloWorld(){
         return "哈哈哈哈";
     }
+    @GetMapping("/say")
+    public String say(){
+        return "cccc";
+    }
 }
